@@ -27,6 +27,7 @@ services:
     # Сбилдить и запустить образ, 
     # описанный в Dockerfile в папке gateway
     build: ./gateway/
+    restart: unless-stopped
     volumes:
       - static:/staticfiles
     ports:

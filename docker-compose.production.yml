@@ -22,6 +22,7 @@ services:
   gateway:
     image: flintydribble/taski_gateway
     env_file: .env
+    restart: unless-stopped
     volumes:
       - static_volume:/staticfiles/
     ports:
